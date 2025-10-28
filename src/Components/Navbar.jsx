@@ -14,7 +14,7 @@ const Navbar = () => {
   const [openLanguage, setOpenLanguage] = useState(false);
 
   const categories = ["All", "Titles", "TV Episodes", "Celebs", "Companies", "Keywords", "Advanced Search"];
-  const languages = ["EN", "ES", "FR", "DE", "IT", "ZH", "JA"];
+  const languages = ["EN", "ES", "FR", "DE", "IT", "ZH"];
 
   return (
     <div className='w-full h-14 p-3 text-slate-100 bg-black'>
