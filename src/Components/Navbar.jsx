@@ -64,7 +64,7 @@ const Navbar = () => {
           <span className='font-bold text-sm'>Watchlist</span>
         </div>
         <div className='flex items-center justify-center px-3 cursor-pointer hover:bg-[#252525] rounded-full h-full'>
-          <p className='font-bold text-sm whitespace-nowrap'>Sign In</p>
+          <p className='font-bold text-sm whitespace-nowrap'>Sign in</p>
         </div>
         <div className='flex  items-center justify-center px-3 cursor-pointer bg-[#F5C518] text-black rounded-full h-full lg:hidden'>
           <span className='font-bold text-sm whitespace-nowrap'>Use app</span>
