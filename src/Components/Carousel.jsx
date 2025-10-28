@@ -65,7 +65,7 @@ const Carousel = () => {
 
 
   return (
-    <div className="w-full h-full flex items-center justify-center relative">
+    <div className="w-full h-full flex items-center justify-center relative hover:cursor-pointer transition ease-in-out hover:brightness-90">
         <div className="w-full h-full max-w-4xl relative">
             <Slider {...settings}>
                 {data.map((item) => (

@@ -5,7 +5,7 @@ const Home = () => {
         <div className="w-full min-h-screen text-white overflow-hidden bg-black pt-4">
             <div className="flex max-w-7xl mx-auto p-2 gap-2">
                 {/* Left side - main trailer area */}
-                <div className="flex flex-1 h-[500px] w-2/3 p-2  bg-amber-200">
+                <div className="flex flex-1 h-[500px] w-2/3 p-2  ">
                     <Carousel />
                 </div>
 
