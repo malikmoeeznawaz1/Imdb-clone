@@ -9,7 +9,8 @@ export const DataProvider = ({children}) => {
     const fetchData = async() => {
         try {
             const res = await axios.get("https://api.tvmaze.com/shows");
-            setData(res.data);
+            const data = res.data;
+            setData(data);            
         } catch (error) {
             console.log(error);
         }
