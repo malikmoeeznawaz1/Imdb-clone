@@ -31,7 +31,7 @@ const Navbar = () => {
         <div className='w-[705px] bg-white h-8 rounded-sm sm:flex items-center justify-between overflow-visible focus-within:ring-2 focus-within:ring-[#E4B716] transition-all duration-300 hidden'>
           <div className='h-full  hover:bg-[#EDEDED] hover:rounded-sm '>
             <div className='relative h-full w-full'>
-              <div onClick={() => setOpenCategory(!openCategory)} className='flex items-center gap-1 px-3 h-full cursor-pointer w-full border-r-[1px] border-gray-400'>
+              <div onClick={() => setOpenCategory(!openCategory)} className='flex items-center gap-1 px-3 h-full cursor-pointer w-full border-r border-gray-400'>
                 <span className='text-sm text-black font-bold'>{category}</span>
                 <MdArrowDropDown size={22} className=' text-black' />
               </div>
@@ -58,7 +58,7 @@ const Navbar = () => {
           <span className='font-bold'>IMDb</span>
           <span className='font-bold text-[#14B2D6]'>Pro</span>
         </div>
-        <div className="h-8 border-l-[1px] border-gray-700"></div>
+        <div className="h-8 border-l border-gray-700"></div>
         <div className='lg:flex items-center justify-center px-3 cursor-pointer hover:bg-[#252525] rounded-full h-full hidden'>
           <BsBookmarkPlusFill size={18} className='mr-1 ' />
           <span className='font-bold text-sm'>Watchlist</span>
