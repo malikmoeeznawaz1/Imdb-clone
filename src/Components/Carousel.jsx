@@ -1,7 +1,7 @@
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai';
+import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 import i1 from '../assets/i1.jpg';
 import i2 from '../assets/i2.jpg';
 import i3 from '../assets/i3.jpg';
@@ -30,9 +30,9 @@ const Carousel = () => {
         return (
             <button 
                 onClick={onClick} 
-                className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300"
+                className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 bg-[black/10] text-white rounded-sm border border-slate-100 py-8 w-12 h-12 lg:flex items-center justify-center transition-all duration-300 cursor-pointer hover:text-[#F5C518] hidden"
             >
-                <AiOutlineArrowLeft size={20} />
+                <IoIosArrowBack size={36}  />
             </button>
         );
     }
@@ -43,16 +43,16 @@ const Carousel = () => {
         return (
             <button 
                 onClick={onClick} 
-                className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 bg-red-600 hover:bg-red-700 text-white rounded-full w-12 h-12 flex items-center justify-center transition-all duration-300"
+                className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 bg-black/10 text-white rounded-sm border border-slate-100 py-8 w-12 h-12 lg:flex items-center justify-center transition-all duration-300 cursor-pointer hover:text-[#F5C518] hidden"
             >
-                <AiOutlineArrowRight size={20} />
+                <IoIosArrowForward  size={36}  />
             </button>
         );
     }
 
       var settings = {
         dots: false,
-        autoplay:true,
+        autoplay:false,
         autoplaySpeed: 3000,
         infinite: true,
         speed: 500,
@@ -70,7 +70,7 @@ const Carousel = () => {
             <Slider {...settings}>
                 {data.map((item) => (
                     <div key={item.id} className="w-full h-full relative">
-                        <div className="w-full h-[480px] rounded-2xl overflow-hidden">
+                        <div className="w-full md:h-[480px] h-[280px] rounded-2xl overflow-hidden">
                             <img 
                                 src={item.image} 
                                 alt={item.title}
