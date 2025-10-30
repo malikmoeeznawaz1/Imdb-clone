@@ -1,15 +1,10 @@
-import React, { useContext, useEffect } from 'react'
 import uimg from '../assets/uimg.jpg';
 import { GoPlay } from "react-icons/go";
 import { IoIosStarOutline } from "react-icons/io";
-import { DataContext } from '../Context/DataContext';
 
-const ComingNext = () => {
-    const {fetchData, data} = useContext(DataContext);
 
-    useEffect(() => {
-        fetchData();
-    }, []);
+const ComingNext = () => {    
+
     return (
         <div className='w-full h-full md:flex flex-col py-2 justify-start hidden'>
             <span className='text-xl font-bold text-[#F5C518] mb-4'>Up Next</span>

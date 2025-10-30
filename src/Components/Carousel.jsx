@@ -5,25 +5,20 @@ import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 import i1 from '../assets/i1.jpg';
 import i2 from '../assets/i2.jpg';
 import i3 from '../assets/i3.jpg';
-
-const data = [{
-    id: 1,
-    title: "Image 1",
-    description: "Description for Image 1",
-    image: i1
-}, {
-    id: 2,
-    title: "Image 2",
-    description: "Description for Image 2",
-    image: i2
-}, {
-    id: 3,
-    title: "Image 3",
-    description: "Description for Image 3",
-    image: i3
-}]
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchData } from '../Data/slice';
 
 const Carousel = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchData());
+    }, []);
+
+    const data = useSelector((state) => state.data.data);
+    console.log(data);
+    
+
     const SamplePrevArrow = (props) => {
         const {onClick} = props;
 
@@ -72,7 +67,7 @@ const Carousel = () => {
                     <div key={item.id} className="w-full h-full relative">
                         <div className="w-full md:h-[480px] h-[280px] rounded-2xl overflow-hidden">
                             <img 
-                                src={item.image} 
+                                src={item.image.original} 
                                 alt={item.title}
                                 className="w-full h-full object-cover"
                             />
