@@ -13,7 +13,6 @@ const Carousel = () => {
     }, []);
 
     const data = useSelector((state) => state.data.data);
-    console.log(data);
 
 
     const SamplePrevArrow = (props) => {

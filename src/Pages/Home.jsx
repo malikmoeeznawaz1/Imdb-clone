@@ -1,6 +1,7 @@
 import Carousel from "../Components/Carousel";
 import ComingNext from "../Components/ComingNext";
 import Featured from "../Components/Featured";
+import PopularCelebrities from "../Components/PopularCelebrities";
 
 const Home = () => {
     return (
@@ -22,6 +23,11 @@ const Home = () => {
             {/* Featured Section */}
             <div className="flex w-full max-w-7xl mx-auto pt-2 gap-2">
                 <Featured />
+            </div>
+
+            {/* Popular Celebrities Section */}
+            <div className="flex w-full max-w-7xl mx-auto pt-2 gap-2">
+                <PopularCelebrities />
             </div>
         </>
     );

@@ -1,9 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
-import dataSlice from "./slice";
+import {dataSliceReducer, popularCelebritiesReducer} from "./slice";
 
 const store = configureStore({
     reducer: {
-        data: dataSlice
+        data: dataSliceReducer,
+        popularCelebrities: popularCelebritiesReducer
     }
 });
 

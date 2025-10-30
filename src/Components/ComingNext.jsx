@@ -5,7 +5,7 @@ import { fetchData } from '../Data/slice';
 import { useEffect } from "react";
 
 
-const ComingNext = () => {
+const ComingNext = () => {    
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchData());

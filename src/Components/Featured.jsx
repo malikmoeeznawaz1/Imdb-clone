@@ -12,7 +12,7 @@ const Featured = () => {
 
     useEffect(() => {
         dispatch(fetchData());
-    }, [dispatch]);
+    }, []);
 
     const data = useSelector((state) => state.data.data);
 
@@ -89,9 +89,9 @@ const Featured = () => {
             <div className="max-w-4xl relative">
                 <Slider {...settings}>
                     {groups.map(([start, end], index) => (
-                        <div key={index} className="px-2">
-                            <div className="bg-black rounded-xl overflow-hidden cursor-pointer hover:brightness-90 transition duration-200">
-                                <div className="flex space-x-1 rounded-t-xl overflow-hidden">
+                        <div key={index} className="px-1">
+                            <div className="bg-white rounded-xl overflow-hidden cursor-pointer hover:brightness-90 transition duration-200">
+                                <div className="flex space-x-0.5 rounded-t-xl overflow-hidden">
                                     {data.slice(start, end).map((item) => (
                                         <div key={item.id} className="flex-1">
                                             <img
@@ -113,7 +113,7 @@ const Featured = () => {
                                     ))}
                                 </div>
                             </div>
-                            <p className='text-[#5799EF] mt-2 px-2 hover:underline cursor-pointer' href="">See the Picks </p>
+                            <p className='text-[#5799EF] mt-2 px-2 hover:underline cursor-pointer'>See the Picks </p>
                         </div>
                     ))}
                 </Slider>
