@@ -1,10 +1,6 @@
 import React from 'react'
 import { useLocation, Link } from 'react-router-dom'
 
-// This page intentionally DOES NOT fetch data.
-// It expects a `celebrity` object to be passed via `location.state` when navigating from the list.
-// If the object is missing (direct link / refresh), we show a friendly message and a Back button.
-
 const CelebDetail = () => {
     const location = useLocation()
     const celebrity = location.state?.celebrity || null
