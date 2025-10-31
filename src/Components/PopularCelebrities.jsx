@@ -14,7 +14,7 @@ const PopularCelebrities = () => {
     const popData = useSelector((state) => state.popularCelebrities.data);
 
     return (
-        <div className="flex flex-col items-start w-full p-4 mt-2">
+        <div className="flex flex-col items-start w-full p-4 mt-2 mb-4">
             <div
                 onMouseEnter={() => setIsHovered(true)}
                 onMouseLeave={() => setIsHovered(false)}

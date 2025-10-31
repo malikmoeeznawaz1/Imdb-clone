@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const SignIn = () => {
     return (
-        <div className='h-screen w-full bg-[#FFFFFF]'>
+        <div className='w-full bg-[#FFFFFF] pb-4'>
             <div className='max-w-4xl mx-auto p-2'>
                 <div className='flex sm:flex-row flex-col mt-6 items-center sm:items-start'>
                     <div className='w-1/2' >

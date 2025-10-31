@@ -4,6 +4,7 @@ import Home from './Pages/Home'
 import VideoPage from './Pages/VideoPage'
 import CelebDetail from './Pages/CelebDetail'
 import SignIn from './Pages/SignIn'
+import Footer from './Components/Footer'
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/celebrity/:id" element={<CelebDetail />} />
         <Route path="/registration/signin" element={<SignIn />} />
       </Routes>
+      <Footer />
     </>
   )
 }
