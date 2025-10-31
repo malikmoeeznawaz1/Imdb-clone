@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { use, useState } from 'react'
 import logo from '../assets/logo.png'
 import { IoMenu } from "react-icons/io5";
 import { MdArrowDropDown } from "react-icons/md";
@@ -9,9 +9,11 @@ import { MdLocalMovies } from "react-icons/md";
 import { MdOutlineTv } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
 import { BiCameraMovie } from "react-icons/bi";
+import { useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [category, setCategory] = useState("All");
   const [openCategory, setOpenCategory] = useState(false);
 
@@ -23,6 +25,10 @@ const Navbar = () => {
   const categories = ["All", "Titles", "TV Episodes", "Celebs", "Companies", "Keywords", "Advanced Search"];
   const languages = ["EN", "ES", "FR", "DE", "IT", "ZH"];
 
+  const handleClick = () => {
+    navigate('/');
+  }
+
   return (
     <div className='w-full h-14 p-3 text-slate-100 bg-black '>
       <div className='max-w-7xl mx-auto h-full flex items-center  sm:gap-2'>
@@ -30,7 +36,7 @@ const Navbar = () => {
           <IoMenu className='h-6 w-6 cursor-pointer' />
 
         </div>
-        <img className='h-8 cursor-pointer hover:opacity-95' src={logo} alt="logo" />
+        <img onClick={handleClick} className='h-8 cursor-pointer hover:opacity-95' src={logo} alt="logo" />
         <div onClick={() => setOpenMenu(true)} onKeyDown={(e) => { if (e.key === 'Enter') setOpenMenu(true) }} role="button" tabIndex={0} className='hidden sm:flex items-center justify-center rounded-full py-1 gap-1 cursor-pointer px-4 hover:bg-[#252525]'>
           <IoMenu className='h-6 w-6' />
           <span className='text-sm font-bold items-start -mt-0.5'>Menu</span>
@@ -70,9 +76,11 @@ const Navbar = () => {
           <BsBookmarkPlusFill size={18} className='mr-1 ' />
           <span className='font-bold text-sm'>Watchlist</span>
         </div>
-        <div className='flex items-center justify-center px-3 cursor-pointer hover:bg-[#252525] rounded-full h-full'>
-          <p className='font-bold text-sm whitespace-nowrap'>Sign in</p>
-        </div>
+        <Link to="registration/signin">
+          <div className='flex items-center justify-center px-3 cursor-pointer hover:bg-[#252525] rounded-full h-full'>
+            <p className='font-bold text-sm whitespace-nowrap'>Sign in</p>
+          </div>
+        </Link>
         <div className='flex  items-center justify-center px-3 cursor-pointer bg-[#F5C518] text-black rounded-full h-full lg:hidden'>
           <span className='font-bold text-sm whitespace-nowrap'>Use app</span>
         </div>
