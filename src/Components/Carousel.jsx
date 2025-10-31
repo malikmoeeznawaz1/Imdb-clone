@@ -5,8 +5,11 @@ import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import { fetchData } from '../Data/slice';
+import { useNavigate } from 'react-router-dom';
 
 const Carousel = () => {
+    const navigate = useNavigate();
+
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchData());
@@ -41,6 +44,12 @@ const Carousel = () => {
         );
     }
 
+    const videoPlay = (item) => {
+        console.log("Playing video:", item);
+        navigate(`/video/${item.id}`, { state: { videoData: item } });
+        
+    }
+
     var settings = {
         dots: false,
         autoplay: false,
@@ -60,7 +69,7 @@ const Carousel = () => {
             <div className="w-full h-full max-w-4xl relative">
                 <Slider {...settings}>
                     {data.map((item) => (
-                        <div key={item.id} className="w-full h-full relative">
+                        <div onClick={()=> videoPlay(item)} key={item.id} className="w-full h-full relative">
                             <div className="w-full md:h-[525px] h-[280px] rounded-2xl overflow-hidden">
                                 <img
                                     src={item.image.original}

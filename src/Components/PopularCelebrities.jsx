@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchPopularCelebrities } from "../Data/slice";
+import { Link } from "react-router-dom";
 
 const PopularCelebrities = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -28,14 +29,14 @@ const PopularCelebrities = () => {
                 <div className="flex items-center gap-5 px-2">
                     {
                         popData.slice(0, 12).map((celebrity) => {
-                            return <div key={celebrity.id} className="shrink-0 flex flex-col w-52 cursor-pointer hover:brightness-75">
+                            return <Link to={`/celebrity/${celebrity.id}`} state={{celebrity}} key={celebrity.id} className="shrink-0 flex flex-col w-52 cursor-pointer hover:brightness-75">
                                 <div className="w-52 h-52 rounded-full bg-amber-300 p-0.5">
                                     <img key={celebrity.id} src={celebrity.image.medium} alt={celebrity.name} className="h-full w-full object-cover rounded-full" />
                                 </div>
                                 <div className="flex items-center justify-center">
                                     <p className="text-white font-semibold mt-2 text-sm truncate">{celebrity.name}</p>
                                 </div>
-                            </div> 
+                            </Link> 
                         })
                     }
                 </div>
