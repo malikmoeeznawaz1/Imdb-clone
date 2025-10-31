@@ -3,6 +3,7 @@ import Navbar from './Components/Navbar'
 import Home from './Pages/Home'
 import VideoPage from './Pages/VideoPage'
 import CelebDetail from './Pages/CelebDetail'
+import SignIn from './Pages/SignIn'
 
 const App = () => {
   return (

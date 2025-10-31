@@ -9,7 +9,7 @@ import { MdLocalMovies } from "react-icons/md";
 import { MdOutlineTv } from "react-icons/md";
 import { FaRegStar } from "react-icons/fa";
 import { BiCameraMovie } from "react-icons/bi";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Navbar = () => {
